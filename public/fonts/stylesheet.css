@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Akzidenz-Grotesk Pro';
+  src: url('AkzidenzGroteskPro-Bold.woff2') format('woff2'),
+    url('AkzidenzGroteskPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Druk Wide Web';
+  src: url('DrukWideWeb-Bold.woff2') format('woff2'), url('DrukWideWeb-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Druk Wide Super';
+  src: url('DrukWide-Super.woff2') format('woff2'), url('DrukWide-Super.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
