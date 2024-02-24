@@ -25,26 +25,26 @@ const accounts = computed(() => data.accounts)
 
 const animateLogo = (el: any) => {
   gsap.from(el, {
-    delay: 0.6,
+    delay: 0.8,
     y: 100,
-    ease: 'power3.inOut',
-    duration: 2
+    ease: 'back.out',
+    duration: 1
   })
 }
 const animateLogoTwo = (el: any) => {
   gsap.from(el, {
-    delay: 0.8,
+    delay: 1,
     y: 100,
-    ease: 'power3.inOut',
-    duration: 2
+    ease: 'back.out',
+    duration: 1
   })
 }
 const animateLogoTree = (el: any) => {
   gsap.from(el, {
-    delay: 1,
+    delay: 1.2,
     y: 100,
-    ease: 'power3.inOut',
-    duration: 2
+    ease: 'back.out',
+    duration: 1
   })
 }
 const vGsap = (el: any, binding: any) => {
