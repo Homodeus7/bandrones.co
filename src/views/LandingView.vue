@@ -6,9 +6,9 @@
         <div
           class="text font-dark-wide-super text-11xl leading-none uppercase whitespace-nowrap cursor-pointer"
         >
-          <div v-gsap="{ animation: animateTop }" class="flex flex-col items-end">
-            <span>{{ project.nameOne }}</span>
-            <span>{{ project.nameTwo }}</span>
+          <div class="flex flex-col items-end">
+            <span v-gsap="{ animation: animateTop }">{{ project.nameOne }}</span>
+            <span v-gsap="{ animation: animateTop }">{{ project.nameTwo }}</span>
           </div>
         </div>
       </li>
@@ -28,11 +28,11 @@ const animateTop = (el: any) => {
   gsap.from(el, {
     opacity: 0,
     y: -5000,
-    stagger: 0.002,
     rotateY: '-200deg',
-    scaleX: 0.1,
+    rotateX: '-30deg',
+    scaleX: 0,
     ease: 'power4.out',
-    duration: 2
+    duration: 3
   })
 }
 

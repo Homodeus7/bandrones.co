@@ -16,16 +16,11 @@
   </div>
 </template>
 <script setup lang="ts">
-import { useData } from '@/store/data/index'
-import { computed } from 'vue'
 import gsap from 'gsap'
-
-const data = useData()
-const accounts = computed(() => data.accounts)
 
 const animateLogo = (el: any) => {
   gsap.from(el, {
-    delay: 0.8,
+    delay: 1.4,
     y: 100,
     ease: 'back.out',
     duration: 1
@@ -33,7 +28,7 @@ const animateLogo = (el: any) => {
 }
 const animateLogoTwo = (el: any) => {
   gsap.from(el, {
-    delay: 1,
+    delay: 1.6,
     y: 100,
     ease: 'back.out',
     duration: 1
@@ -41,7 +36,7 @@ const animateLogoTwo = (el: any) => {
 }
 const animateLogoTree = (el: any) => {
   gsap.from(el, {
-    delay: 1.2,
+    delay: 1.8,
     y: 100,
     ease: 'back.out',
     duration: 1

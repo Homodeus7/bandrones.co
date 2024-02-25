@@ -51,7 +51,7 @@ const socialLinks = computed(() => data.socialLinks)
 const animateInfo = (el: any) => {
   gsap.from(el, {
     opacity: 0,
-    delay: 1.2,
+    delay: 1.5,
     y: 100,
     ease: 'power3.inOut',
     duration: 2
@@ -60,7 +60,7 @@ const animateInfo = (el: any) => {
 const animateInfoTwo = (el: any) => {
   gsap.from(el, {
     opacity: 0,
-    delay: 1.35,
+    delay: 1.65,
     y: 100,
     ease: 'power3.inOut',
     duration: 2
@@ -69,7 +69,7 @@ const animateInfoTwo = (el: any) => {
 const animateInfoThree = (el: any) => {
   gsap.from(el, {
     opacity: 0,
-    delay: 1.5,
+    delay: 1.8,
     y: 100,
     ease: 'power3.inOut',
     duration: 2
@@ -78,7 +78,7 @@ const animateInfoThree = (el: any) => {
 const animateInfoFour = (el: any) => {
   gsap.from(el, {
     opacity: 0,
-    delay: 1.65,
+    delay: 1.95,
     y: 100,
     ease: 'power3.inOut',
     duration: 2
