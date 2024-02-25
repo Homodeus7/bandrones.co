@@ -1,22 +1,22 @@
 <template>
-  <HeaderLanding />
-  <main class="stagePerspective parallaxPerspective my-52">
-    <ul class="projects flex flex-col">
-      <li v-for="project in projects" :key="project.nameOne" class="box">
-        <div
-          class="text font-dark-wide-super text-11xl leading-none uppercase whitespace-nowrap cursor-pointer"
-        >
-          <div class="flex flex-col items-end">
-            <span v-gsap="{ animation: animateTop }">{{ project.nameOne }}</span>
-            <span v-gsap="{ animation: animateTop }">{{ project.nameTwo }}</span>
+  <main>
+    <nav class="stagePerspective parallaxPerspective py-52">
+      <ul class="projects flex flex-col">
+        <li v-for="project in projects" :key="project.nameOne" class="box">
+          <div
+            class="text font-dark-wide-super text-11xl leading-none uppercase whitespace-nowrap cursor-pointer"
+          >
+            <div class="flex flex-col items-end">
+              <span v-gsap="{ animation: animateTop }">{{ project.nameOne }}</span>
+              <span v-gsap="{ animation: animateTop }">{{ project.nameTwo }}</span>
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </nav>
   </main>
 </template>
 <script setup lang="ts">
-import HeaderLanding from '@/components/landing/HeaderLanding.vue'
 import { useData } from '@/store/data/index'
 import { computed } from 'vue'
 import gsap from 'gsap'
@@ -25,15 +25,27 @@ const data = useData()
 const projects = computed(() => data.projects)
 
 const animateTop = (el: any) => {
-  gsap.from(el, {
-    opacity: 0,
-    y: -5000,
-    rotateY: '-200deg',
-    rotateX: '-30deg',
-    scaleX: 0,
-    ease: 'power4.out',
-    duration: 3
-  })
+  gsap.fromTo(
+    el,
+    {
+      opacity: 0,
+      transformOrigin: 'right center',
+      scale: 0,
+      y: -2000,
+      rotateY: '-200deg',
+      rotateX: '-150deg'
+    },
+    {
+      y: 0,
+      scale: 1,
+      rotateY: '0deg',
+      rotateX: '0deg',
+      ease: 'power4.out',
+      duration: 3,
+      opacity: 1,
+      delay: 0.2
+    }
+  )
 }
 
 const vGsap = (el: any, binding: any) => {
@@ -43,13 +55,12 @@ const vGsap = (el: any, binding: any) => {
 </script>
 <style scoped lang="scss">
 .parallaxPerspective {
-  perspective-origin: 20% 60%;
+  perspective-origin: 20% 50%;
   will-change: perspective-origin;
 }
 .stagePerspective {
   position: relative;
   perspective: 100vw;
-  height: 100vh;
   will-change: transform;
 }
 .projects {

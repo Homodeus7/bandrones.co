@@ -11,23 +11,23 @@ const router = createRouter({
       name: 'landing',
       component: LandingView,
       meta: {
-        layout: 'landing'
+        layout: 'main'
       }
     },
     {
       path: '/work',
       name: 'work',
-      component: MagazineView,
+      component: WorkView,
       meta: {
-        layout: 'work'
+        layout: 'main'
       }
     },
     {
-      path: '/team',
-      name: 'team',
-      component: WorkView,
+      path: '/magazine',
+      name: 'magazine',
+      component: MagazineView,
       meta: {
-        layout: 'magazine'
+        layout: 'main'
       }
     }
   ],

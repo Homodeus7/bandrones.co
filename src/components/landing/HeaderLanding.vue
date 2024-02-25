@@ -2,7 +2,10 @@
   <header class="fixed bottom-0 w-full z-20">
     <div class="flex flex-col px-16 pb-10 pr-60">
       <MainLogo />
-      <nav class="flex items-end gap-10 pt-6 text-white whitespace-nowrap">
+      <nav
+        class="flex items-end gap-10 pt-6 whitespace-nowrap"
+        :class="path === '/' ? 'text-white' : 'text-black'"
+      >
         <div v-gsap="{ animation: animateInfo }" class="flex flex-col gap-2">
           <span>{{ info.name }}</span>
           <span>{{ info.direct }}</span>
@@ -41,7 +44,11 @@
 import MainLogo from '@/components/MainLogo.vue'
 import { useData } from '@/store/data/index'
 import { computed } from 'vue'
+import { useRouter } from 'vue-router'
 import gsap from 'gsap'
+
+const router = useRouter()
+const path = computed(() => router.currentRoute.value.path)
 
 const data = useData()
 const info = computed(() => data.info)
