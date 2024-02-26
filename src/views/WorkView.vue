@@ -1,11 +1,11 @@
 <template>
-  <main class="max-w-[1440px] m-auto min-h-[100vh]">
-    <div class="flex justify-end">
+  <main class="back min-h-[100vh]">
+    <div class="max-w-[1440px] m-auto flex justify-end">
       <h1
-        class="text font-dark-wide-super text-7xl leading-none tracking-wider uppercase whitespace-nowrap"
+        class="text flex flex-col items-end pt-[110px] font-dark-wide-super text-8xl leading-none tracking-wider uppercase whitespace-nowrap z-10"
       >
-        Stardex <br />
-        P2P trade
+        <span>Stardex</span>
+        <span>P2P trade</span>
       </h1>
     </div>
   </main>
@@ -13,8 +13,17 @@
 <script setup lang="ts"></script>
 <style scoped lang="scss">
 .text {
-  transition: color 0.5s, opacity 0.5s;
   color: hsla(0, 0%, 95%, 0.01);
-  -webkit-text-stroke: 2px #000;
+  -webkit-text-stroke: 1.5px #000000;
+}
+
+.back::after {
+  content: '';
+  position: absolute;
+  top: 220px;
+  height: 60vh;
+  width: 100vw;
+  background: #534ca5;
+  z-index: 0;
 }
 </style>

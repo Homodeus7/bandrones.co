@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 export const useData = defineStore('data', {
   state: () => ({
     projects: [
-      { nameOne: 'Stardex', nameTwo: 'P2P Trade', link: '#' },
+      { nameOne: 'Stardex', nameTwo: 'P2P Trade', link: '/work' },
       { nameOne: 'PlayW', nameTwo: 'WEB3', link: '#' },
       { nameOne: 'Geo', nameTwo: 'Privacy', link: '#' }
     ],

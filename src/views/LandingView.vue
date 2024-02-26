@@ -6,10 +6,12 @@
           <div
             class="text font-dark-wide-super text-11xl leading-none uppercase whitespace-nowrap cursor-pointer"
           >
-            <div class="flex flex-col items-end">
-              <span v-gsap="{ animation: animateTop }">{{ project.nameOne }}</span>
-              <span v-gsap="{ animation: animateTop }">{{ project.nameTwo }}</span>
-            </div>
+            <router-link :to="project.link">
+              <div class="flex flex-col items-end">
+                <span v-gsap="{ animation: animateTop }">{{ project.nameOne }}</span>
+                <span v-gsap="{ animation: animateTop }">{{ project.nameTwo }}</span>
+              </div>
+            </router-link>
           </div>
         </li>
       </ul>
@@ -30,20 +32,20 @@ const animateTop = (el: any) => {
     {
       opacity: 0,
       transformOrigin: 'right center',
-      scale: 0,
+      scaleX: 0.1,
       y: -2000,
       rotateY: '-200deg',
       rotateX: '-150deg'
     },
     {
       y: 0,
-      scale: 1,
+      scaleX: 1,
       rotateY: '0deg',
       rotateX: '0deg',
       ease: 'power4.out',
       duration: 3,
       opacity: 1,
-      delay: 0.2
+      delay: 0.4
     }
   )
 }
