@@ -47,6 +47,11 @@ import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import gsap from 'gsap'
 
+interface HeaderLanding {
+  delay?: number
+}
+const props = defineProps<HeaderLanding>()
+
 const router = useRouter()
 const path = computed(() => router.currentRoute.value.path)
 

@@ -4,8 +4,8 @@ export const useData = defineStore('data', {
   state: () => ({
     projects: [
       { nameOne: 'Stardex', nameTwo: 'P2P Trade', link: '/work' },
-      { nameOne: 'PlayW', nameTwo: 'WEB3', link: '#' },
-      { nameOne: 'Geo', nameTwo: 'Privacy', link: '#' }
+      { nameOne: 'PlayW', nameTwo: 'WEB3', link: '/work' },
+      { nameOne: 'Geo', nameTwo: 'Privacy', link: '/work' }
     ],
     info: {
       name: 'Studio of Brathers Avdrosov',
